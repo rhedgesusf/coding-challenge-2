@@ -29,4 +29,22 @@ console.log("Sum:", sum);
 
 console.log("Average:", sum / scores.length);
 
+///////////////////////////////////
+// Task 3: Working with Objects ///
+///////////////////////////////////
+
+let employee = {
+    name: "Ethan Pitta",
+    age: 20,
+    department: "management",
+    isActive: true
+};
+
+console.log("Initial Object", employee);
+
+employee.department = "e-commerce";
+console.log("Changed Department", employee);
+
+employee.position = "intern";
+console.log("Added Position", employee);
 
