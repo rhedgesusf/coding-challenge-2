@@ -2,6 +2,9 @@
 // Task 1: Working With Arrays //
 /////////////////////////////////
 
+console.log('--------------------------------------');
+console.log('Task 1: Working With Arrays');
+
 let products = ["Coke", "Pepsi", "Fanta", "Sprite", "Ginger Ale"];
 console.log("Initial Array", products);
 
@@ -15,23 +18,34 @@ console.log("Removed Mug", products);
 // Task 2: Accessing and Modifying Arrays //
 ////////////////////////////////////////////
 
+console.log('--------------------------------------');
+console.log('Task 2: Accessing and Modifying Arrays');
+
 let scores = [90, 98, 45, 76, 37];
 console.log("Initial Scores", scores);
 
 scores[1] = 99;
 console.log("Updated Second Score", scores);
 
+/*
+found easier way to calculate sum
 let sum = 0;
 for (let i = 0; i < scores.length; i++) {
   sum += scores[i];
 }
 console.log("Sum:", sum);
+*/
+
+let sum = scores.reduce((sum, score) => sum + score, 0);
 
 console.log("Average:", sum / scores.length);
 
 ///////////////////////////////////
 // Task 3: Working with Objects ///
 ///////////////////////////////////
+
+console.log('--------------------------------------');
+console.log('Task 3: Working with Objects');
 
 let employee = {
   name: "Ethan Pitta",
@@ -51,6 +65,9 @@ console.log("Added Position", employee);
 ///////////////////////////////
 // Task 4: Array of Objects ///
 ///////////////////////////////
+
+console.log('--------------------------------------');
+console.log('Task 4: Array of Objects');
 
 let customers = [
   {
@@ -86,19 +103,20 @@ console.log("Adding 4th Customer -", JSON.stringify(customers));
 // Task 5: Objects Methods ///
 //////////////////////////////
 
+console.log('--------------------------------------');
+console.log('Task 5: Objects Methods');
+
 let order = {
     orderID: 97,
     customerName: "Riley Hedges",
-    amount: 54.52
+    amount: 54.52,
+    calculateTax: function() {
+      return this.amount * 0.10;
+    }
 };
 
 console.log("Initial Order:", order);
 
-function calculateTax(price, taxRate) {
-    return price * taxRate;
-};
+let tax = order.calculateTax();
 
-let taxRate = 0.10;
-let tax = calculateTax(order.amount, taxRate);
-
-console.log("Tax:", tax);
+console.log("Tax:", tax.toFixed(2));
