@@ -23,7 +23,7 @@ console.log("Updated Second Score", scores);
 
 let sum = 0;
 for (let i = 0; i < scores.length; i++) {
-    sum += scores[i];
+  sum += scores[i];
 }
 console.log("Sum:", sum);
 
@@ -34,10 +34,10 @@ console.log("Average:", sum / scores.length);
 ///////////////////////////////////
 
 let employee = {
-    name: "Ethan Pitta",
-    age: 20,
-    department: "management",
-    isActive: true
+  name: "Ethan Pitta",
+  age: 20,
+  department: "management",
+  isActive: true,
 };
 
 console.log("Initial Object", employee);
@@ -48,3 +48,36 @@ console.log("Changed Department", employee);
 employee.position = "intern";
 console.log("Added Position", employee);
 
+///////////////////////////////
+// Task 4: Array of Objects ///
+///////////////////////////////
+
+let customers = [
+  {
+    name: "Jon Jones",
+    email: "JJones@gmail.com",
+    purchaseAmount: 505.02
+  },
+  {
+    name: "Bill Maiers",
+    email: "BMaiers@gmail.com",
+    purchaseAmount: 97.85
+  },
+  {
+    name: "Morgan Freeman",
+    email: "MFreeman@gmail.com",
+    purchaseAmount: 5.99
+  },
+];
+
+console.log("Initial Customers -", customers);
+console.log("Initial Customers stringified -", JSON.stringify(customers));
+console.log("Third Customer Name -", customers[2].name);
+
+customers.push({
+    name: "Mike Myers",
+    email: "MM@gmail.com",
+    purchaseAmount: 987.99
+});
+
+console.log("Adding 4th Customer -", JSON.stringify(customers));
