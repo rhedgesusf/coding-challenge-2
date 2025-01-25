@@ -81,3 +81,24 @@ customers.push({
 });
 
 console.log("Adding 4th Customer -", JSON.stringify(customers));
+
+//////////////////////////////
+// Task 5: Objects Methods ///
+//////////////////////////////
+
+let order = {
+    orderID: 97,
+    customerName: "Riley Hedges",
+    amount: 54.52
+};
+
+console.log("Initial Order:", order);
+
+function calculateTax(price, taxRate) {
+    return price * taxRate;
+};
+
+let taxRate = 0.10;
+let tax = calculateTax(order.amount, taxRate);
+
+console.log("Tax:", tax);
